@@ -5,22 +5,6 @@ import java.util.List;
 import domain.entities.Produto;
 import application.ports.output.IProdutoRepositorio;
 
-/*
- * ============================================================
- * ARQUITETURA HEXAGONAL - ADAPTADOR DE SAÍDA ALTERNATIVO
- * ============================================================
- *
- * CAMADA: ADAPTERS (OUTPUT)
- * RESPONSABILIDADE:
- *   Implementação alternativa da porta de saída (IProdutoRepositorio).
- *   Simula persistência com arquivo (apenas lista em memória por simplicidade).
- *
- * PRINCÍPIO HEXAGONAL:
- *   Demonstra como fácil é adicionar adaptadores alternativos.
- *   Sem mudança no domínio ou casos de uso!
- *
- * TECNOLOGIA: Arquivo (simulado com List em memória)
- */
 public class ProdutoRepositorioArquivo implements IProdutoRepositorio {
 
     private List<Produto> produtos = new ArrayList<>();
